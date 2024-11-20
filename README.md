@@ -65,7 +65,18 @@ Open [http://localhost:3000](http://localhost:3000)
          Unit Tests : npm test
          End-to-End Tests :  npx playwright test
 
+# Usage
+     JSON schema into the editor : 
+         {
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "age": { "type": "number" }
+  },
+  "required": ["name"]
+}
 
+     
  # Folder Structure 
 
    src/
@@ -92,6 +103,7 @@ Open [http://localhost:3000](http://localhost:3000)
 
  # Author
 Your Name: Sunil Dagur
+
 GitHub: sunildagur7078
 
 
