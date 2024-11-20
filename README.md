@@ -1,46 +1,98 @@
-# Getting Started with Create React App
+ # Dynamic Form Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A real-time Dynamic Form Generator that takes a JSON schema as input and generates a styled, functional form in real-time. The app features a split-screen interface with a JSON editor on one side and a live preview of the generated form on the other.
+
+---
+
+## **Features**
+
+- **Dynamic Form Generation**: Generate forms on the fly based on a provided JSON schema.
+- **Real-Time Updates**: See changes in the form as you edit the JSON schema.
+- **JSON Validation**: Validate JSON syntax and display helpful error messages.
+- **Form Validation**: Proper error messages for required and invalid fields.
+- **Responsive Design**: Works seamlessly on desktop and mobile devices.
+- **Theming and Styling**: Styled consistently using Tailwind CSS.
+- **Submission Feedback**: Displays success and loading states on form submission.
+
+
+
+## **Tech Stack**
+
+- **Frontend**: React 18+, TypeScript, Tailwind CSS
+- **Form Handling**: React Hook Form
+- **JSON Editor**: Monaco Editor
+- **Testing**: 
+  - **Unit Tests**: Jest
+  - **End-to-End Tests**: Playwright
+
+---
+
+## **Installation**
+
+# Getting Started with Create React App
+ Set up the project
+# Initialize React App :  npx create-react-app dynamic-form-generator --template typescript
+
+# Install Dependencies:  npm install tailwindcss react-hook-form ajv ajv-errors @monaco-editor/react playwright jest
+
+1. tailwindcss for styling.
+2. react-hook-form for form management.
+3. ajv & ajv-errors for JSON schema validation.
+4. @monaco-editor/react for the JSON editor.
+5. playwright and jest for testing
+
+
+# Tailwind CSS Setup : 
+   Initialize Tailwind CSS: npx tailwindcss init
+# JSON Editor 
+       Use @monaco-editor/react for syntax-highlighted JSON editing
+       Validate JSON in real-time with ajv
+
+
+
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
-
+# Run the Development Server
+           `npm start`
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+# Run Tests
+         Unit Tests : npm test
+         End-to-End Tests :  npx playwright test
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+ # Folder Structure 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   src/
+├── components/
+│   ├── Editor/
+│   │   └── JsonEditor.tsx      // JSON editor component
+│   ├── Form/
+│   │   └── FormGenerator.tsx   // Form generator component
+├── pages/
+│   └── Home.tsx                // Main application layout
+├── tests/
+│   ├── Editor.test.tsx         // Unit tests for JSON editor
+│   ├── Form.test.tsx           // Unit tests for form generator
+│   ├── End-to-End/
+│   │   ├── Editor.spec.ts      // E2E tests for JSON editor
+│   │   └── Form.spec.ts        // E2E tests for form generator
+├── utils/
+│   ├── jsonValidator.ts        // Utility for JSON validation
+│   ├── schemaInterfaces.ts     // TypeScript interfaces for JSON schema
+├── App.tsx                     // Root component
+├── index.tsx                   // Application entry point
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+ # Author
+Your Name: Sunil Dagur
+GitHub: sunildagur7078
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
